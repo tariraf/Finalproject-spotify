@@ -41,6 +41,7 @@ import Card from '../Card';
                             title={res.name}
                             artist={res.artists[0].name}
                             albumImg={res.images[0].url}
+                            data={res}
                         />
                         </li>
                     
