@@ -1,7 +1,7 @@
 const startLogin = () =>{
     const handleLogin = () => {
     let client_id = '53c1cff414d4428e8eb8c43f1a612b71';
-    let redirect_uri = 'http://localhost:3001/';
+    let redirect_uri = 'http://localhost:3000/';
     let scope = 'playlist-modify-private';
     let url = 'https://accounts.spotify.com/authorize?' +
         'client_id=' + encodeURIComponent(client_id) +

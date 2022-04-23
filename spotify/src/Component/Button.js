@@ -4,16 +4,19 @@ import '../Style/cardstyle.css'
 
 
 const Button = ({ item, songId }) => {
-    const [select, setSelect] =  useState(false);
-    const [count, setCount] = useState(-1);
-
-    const handleCount = ()=>{
-        setCount(count++);
-    }
+    const [select, setSelect] =  useState(
+        ()=>{
+            let current_selected = JSON.parse(localStorage.getItem('selected_item'))
+            if (current_selected[item.id]===undefined) {
+                return false;
+            }else{
+                return true;
+            }
+        }
+    );
 
     const handleSelect = () => {
         setSelect(!select);
-        setCount();
         let current_selected = JSON.parse(localStorage.getItem('selected_item'));
         if (!select){
             current_selected[item.id] = item;
@@ -35,5 +38,6 @@ const Button = ({ item, songId }) => {
     );
     
 }
+
 
 export default Button;

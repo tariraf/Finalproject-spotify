@@ -7,7 +7,7 @@ const Songdesc = ({ title, artist, albumImg, keyId, data}) => {
       <img src = { albumImg }/>
       <h3> { title } </h3> 
       <p> <span className = 'by'> by </span>{artist}</p>
-      <Button item={data} songId={keyId} />
+      <Button item={data} />
     </div>
     );
 };
