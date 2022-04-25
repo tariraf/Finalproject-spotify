@@ -44,6 +44,7 @@
 
 .card {
     flex: auto;
+    padding: 0 20px;
 }
 
 .songUrl {
